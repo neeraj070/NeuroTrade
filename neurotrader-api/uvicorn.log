@@ -1,0 +1,4 @@
+Initializing NeuroTrader models and data caches...
+NeuroTrader resources cached successfully.
+INFO:     127.0.0.1:54972 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54972 - "GET /api/stocks HTTP/1.1" 200 OK

@@ -1,0 +1,33 @@
+{
+    "selected_experiment": "F1_mse",
+    "config": {
+        "hidden_dim": 64,
+        "num_layers": 2,
+        "seq_len": 30,
+        "dropout": 0.2,
+        "loss": "mse",
+        "lr": 0.001,
+        "batch_size": 64,
+        "weight_decay": 0.0001
+    },
+    "validation_metrics": {
+        "hidden_dim": 64,
+        "num_layers": 2,
+        "seq_len": 30,
+        "dropout": 0.2,
+        "loss": "mse",
+        "lr": 0.001,
+        "batch_size": 64,
+        "weight_decay": 0.0001,
+        "MAE": 0.008031241595745087,
+        "MSE": 0.0001351229875581339,
+        "RMSE": 0.011624241375596684,
+        "Dir_Acc": 0.5288135593220339,
+        "best_epoch": 48,
+        "best_val_loss": 0.00013733285647634017,
+        "total_epochs": 63,
+        "time": 66.11130785942078
+    },
+    "zero_baseline_mae": 0.008046071976423264,
+    "beats_zero": true
+}

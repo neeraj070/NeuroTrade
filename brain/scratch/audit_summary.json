@@ -1,0 +1,118 @@
+{
+  "raw_files_exist": true,
+  "proc_files_exist": true,
+  "train_tensors_exist": true,
+  "val_tensors_exist": true,
+  "test_tensors_exist": true,
+  "train_shape": true,
+  "val_shape": true,
+  "test_shape": true,
+  "ckpts_exist": {
+    "improved_rnn_encoder.pt": true,
+    "best_rnn_encoder.pt": true,
+    "bce_directional_encoder.pt": true,
+    "focal_directional_encoder.pt": true
+  },
+  "embeddings_exist": {
+    "train_embeddings_improved.pt": true,
+    "val_embeddings_improved.pt": true,
+    "test_embeddings_improved.pt": true,
+    "train_embeddings_bce.pt": true,
+    "val_embeddings_bce.pt": true,
+    "test_embeddings_bce.pt": true,
+    "train_embeddings_focal.pt": true,
+    "val_embeddings_focal.pt": true,
+    "test_embeddings_focal.pt": true
+  },
+  "reports_exist": {
+    "reports/data_preparation/data_quality_report.md": true,
+    "reports/data_preparation/feature_documentation.md": true,
+    "reports/data_preparation/final_data_preparation_report.md": true,
+    "reports/model_training/corrected_evaluation_report.md": true,
+    "reports/model_training/lstm_improvement_report.md": true,
+    "reports/model_training/final_test_evaluation.json": true,
+    "reports/model_training/embedding_analysis/embedding_quality_report.md": true,
+    "reports/model_training/final_lstm_improvement_audit.md": true,
+    "reports/model_training/directional_classification_report.md": true,
+    "reports/reinforcement_learning/trading_environment_report.md": true
+  },
+  "notebook_status": {
+    "data/notebooks/01_data_collection.ipynb": {
+      "exists": true,
+      "total_cells": 11,
+      "code_cells": 5,
+      "executed_cells": 0,
+      "has_outputs": false
+    },
+    "data/notebooks/02_data_cleaning.ipynb": {
+      "exists": true,
+      "total_cells": 11,
+      "code_cells": 5,
+      "executed_cells": 0,
+      "has_outputs": false
+    },
+    "data/notebooks/03_eda.ipynb": {
+      "exists": true,
+      "total_cells": 19,
+      "code_cells": 9,
+      "executed_cells": 0,
+      "has_outputs": false
+    },
+    "data/notebooks/04_feature_engineering.ipynb": {
+      "exists": true,
+      "total_cells": 13,
+      "code_cells": 6,
+      "executed_cells": 0,
+      "has_outputs": false
+    },
+    "data/notebooks/05_preprocessing.ipynb": {
+      "exists": true,
+      "total_cells": 13,
+      "code_cells": 6,
+      "executed_cells": 0,
+      "has_outputs": false
+    },
+    "data/notebooks/06_data_validation.ipynb": {
+      "exists": true,
+      "total_cells": 15,
+      "code_cells": 7,
+      "executed_cells": 0,
+      "has_outputs": false
+    },
+    "backend/notebooks/01_lstm_training.ipynb": {
+      "exists": true,
+      "total_cells": 17,
+      "code_cells": 8,
+      "executed_cells": 0,
+      "has_outputs": false
+    },
+    "backend/notebooks/02_lstm_evaluation.ipynb": {
+      "exists": true,
+      "total_cells": 16,
+      "code_cells": 7,
+      "executed_cells": 0,
+      "has_outputs": false
+    },
+    "backend/notebooks/03_embedding_analysis.ipynb": {
+      "exists": true,
+      "total_cells": 14,
+      "code_cells": 6,
+      "executed_cells": 0,
+      "has_outputs": false
+    },
+    "backend/notebooks/04_rl_development.ipynb": {
+      "exists": true,
+      "total_cells": 16,
+      "code_cells": 7,
+      "executed_cells": 0,
+      "has_outputs": false
+    },
+    "backend/notebooks/05_directional_classification.ipynb": {
+      "exists": true,
+      "total_cells": 17,
+      "code_cells": 8,
+      "executed_cells": 0,
+      "has_outputs": false
+    }
+  }
+}

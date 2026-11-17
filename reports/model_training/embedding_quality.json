@@ -1,0 +1,15 @@
+{
+    "dimensions": 32,
+    "active_dimensions": 0,
+    "dead_dimensions": 32,
+    "mean_variance": 1.3855953966412926e-06,
+    "min_variance": 1.4035171636006538e-10,
+    "max_variance": 1.6871685147634707e-05,
+    "temporal_cosine_sim": 0.9999998807907104,
+    "up_vs_down_cosine_sim": 1.0,
+    "up_vs_down_euclidean": 0.0005198268918320537,
+    "high_vs_low_vol_cosine_sim": 0.9999991655349731,
+    "high_vs_low_vol_euclidean": 0.0027335581835359335,
+    "nan_count": 0,
+    "inf_count": 0
+}

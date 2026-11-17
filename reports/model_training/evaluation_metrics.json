@@ -1,0 +1,139 @@
+{
+    "best_epoch": 15,
+    "best_val_loss": 6.885810021880648e-05,
+    "neutral_threshold_tau": 0.00017639435827732086,
+    "overall": {
+        "model": {
+            "MAE": 0.01312890276312828,
+            "MSE": 0.00032139988616108894,
+            "RMSE": 0.017927629128278198,
+            "Conventional_Directional_Accuracy": 0.46256983240223465,
+            "Filtered_Directional_Accuracy": 0.46530612244897956,
+            "Coverage": 0.8212290502793296,
+            "Active_Count": 735,
+            "Neutral_Count": 160,
+            "Threshold_Tau": 0.00017639435827732086
+        },
+        "zero_baseline": {
+            "MAE": 0.013049603439867496,
+            "MSE": 0.00032025581458583474,
+            "RMSE": 0.017895692959427834,
+            "Conventional_Directional_Accuracy": null,
+            "Description": "Zero-return prediction baseline (MAE/RMSE reference only)"
+        },
+        "majority_baseline": {
+            "MAE": 1.000862717628479,
+            "MSE": 1.002045750617981,
+            "RMSE": 1.0010223388671875,
+            "Conventional_Directional_Accuracy": 0.441340782122905,
+            "Description": "Always predict training majority direction (+1)"
+        }
+    },
+    "per_company": {
+        "HDFCBANK": {
+            "model": {
+                "MAE": 0.012383277527987957,
+                "MSE": 0.0002606149937491864,
+                "RMSE": 0.016143574379584788,
+                "Conventional_Directional_Accuracy": 0.44692737430167595,
+                "Filtered_Directional_Accuracy": 0.4666666666666667,
+                "Coverage": 0.7541899441340782,
+                "Active_Count": 135,
+                "Neutral_Count": 44,
+                "Threshold_Tau": 0.00017639435827732086
+            },
+            "zero_baseline": {
+                "MAE": 0.01234840415418148,
+                "RMSE": 0.016176274046301842
+            },
+            "majority_baseline": {
+                "Directional_Accuracy": 0.41899441340782123
+            },
+            "sample_count": 179
+        },
+        "INFY": {
+            "model": {
+                "MAE": 0.016471900045871735,
+                "MSE": 0.0004609053139574826,
+                "RMSE": 0.02146870545602325,
+                "Conventional_Directional_Accuracy": 0.45251396648044695,
+                "Filtered_Directional_Accuracy": 0.4444444444444444,
+                "Coverage": 0.9553072625698324,
+                "Active_Count": 171,
+                "Neutral_Count": 8,
+                "Threshold_Tau": 0.00017639435827732086
+            },
+            "zero_baseline": {
+                "MAE": 0.016297917813062668,
+                "RMSE": 0.021382182836532593
+            },
+            "majority_baseline": {
+                "Directional_Accuracy": 0.41899441340782123
+            },
+            "sample_count": 179
+        },
+        "ITC": {
+            "model": {
+                "MAE": 0.010179579257965088,
+                "MSE": 0.00019045540830120444,
+                "RMSE": 0.01380055826049093,
+                "Conventional_Directional_Accuracy": 0.4972067039106145,
+                "Filtered_Directional_Accuracy": 0.5103448275862069,
+                "Coverage": 0.8100558659217877,
+                "Active_Count": 145,
+                "Neutral_Count": 34,
+                "Threshold_Tau": 0.00017639435827732086
+            },
+            "zero_baseline": {
+                "MAE": 0.010147539898753166,
+                "RMSE": 0.01379841472953558
+            },
+            "majority_baseline": {
+                "Directional_Accuracy": 0.4692737430167598
+            },
+            "sample_count": 179
+        },
+        "RELIANCE": {
+            "model": {
+                "MAE": 0.011729151010513306,
+                "MSE": 0.0002759156923275441,
+                "RMSE": 0.016610710169271636,
+                "Conventional_Directional_Accuracy": 0.46368715083798884,
+                "Filtered_Directional_Accuracy": 0.45925925925925926,
+                "Coverage": 0.7541899441340782,
+                "Active_Count": 135,
+                "Neutral_Count": 44,
+                "Threshold_Tau": 0.00017639435827732086
+            },
+            "zero_baseline": {
+                "MAE": 0.011684947647154331,
+                "RMSE": 0.016573363915085793
+            },
+            "majority_baseline": {
+                "Directional_Accuracy": 0.4748603351955307
+            },
+            "sample_count": 179
+        },
+        "TCS": {
+            "model": {
+                "MAE": 0.014880604110658169,
+                "MSE": 0.00041910805157385767,
+                "RMSE": 0.020472128652728266,
+                "Conventional_Directional_Accuracy": 0.45251396648044695,
+                "Filtered_Directional_Accuracy": 0.44966442953020136,
+                "Coverage": 0.8324022346368715,
+                "Active_Count": 149,
+                "Neutral_Count": 30,
+                "Threshold_Tau": 0.00017639435827732086
+            },
+            "zero_baseline": {
+                "MAE": 0.014769202098250389,
+                "RMSE": 0.020428823307156563
+            },
+            "majority_baseline": {
+                "Directional_Accuracy": 0.4245810055865922
+            },
+            "sample_count": 179
+        }
+    }
+}
