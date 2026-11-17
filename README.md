@@ -2,12 +2,6 @@
 
 ## Reinforcement Learning with RNN-Based Market State Representation for Algorithmic Trading
 
-**B.Tech Final-Year Capstone Project**  
-*Evaluation Period: 2021-11-04 to 2026-11-04 (5 NSE Equities)*  
-*Status: Completed & 100% Bitwise Reproducible*
-
----
-
 ## 1. Executive Summary
 
 NeuroTrader is an algorithmic trading system that integrates a pre-trained, frozen Recurrent Neural Network (LSTM) market-state encoder with a Proximal Policy Optimization (PPO) reinforcement learning agent. The framework transforms noisy historical market data into stationary, continuous feature representations, enabling an RL agent to make risk-controlled trading decisions.
