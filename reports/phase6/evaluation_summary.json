@@ -1,0 +1,93 @@
+{
+  "evaluation_status": "IN PROGRESS \u2014 MULTI-SESSION EVALUATION ACTIVE (1 / 20 Sessions Observed)",
+  "is_complete": false,
+  "sessions_observed": 1,
+  "target_sessions": 20,
+  "portfolio_performance": {
+    "initial_portfolio_value": 100000.0,
+    "final_portfolio_value": 100000.0,
+    "cumulative_return_pct": 0.0,
+    "realized_pnl": 0.0,
+    "unrealized_pnl": 0.0,
+    "total_pnl": 0.0,
+    "total_transaction_fees": 0
+  },
+  "risk_metrics": {
+    "sharpe_ratio": 0.0,
+    "sharpe_ratio_note": "Preliminary estimate only; requires >= 20 forward trading sessions for statistical significance (Current N=1)",
+    "sortino_ratio": 0.0,
+    "annualized_volatility_pct": 0.0,
+    "annualized_volatility_note": "Preliminary annualized estimate based on 1 session(s); requires >= 20 sessions",
+    "downside_deviation_pct": 0.0,
+    "maximum_drawdown_pct": 0.0,
+    "risk_free_rate_used": "6.50% (RBI 91-day T-Bill rate)"
+  },
+  "trading_metrics": {
+    "total_executed_trades": 0,
+    "closed_round_trip_trades": 0,
+    "buy_orders_executed": 0,
+    "sell_orders_executed": 0,
+    "hold_decisions_logged": 0,
+    "winning_trades": 0,
+    "losing_trades": 0,
+    "win_rate_pct": null,
+    "win_rate_display": "N/A (0 closed trades; pending/open positions excluded)",
+    "profit_factor": null,
+    "profit_factor_display": "N/A (No closed round-trip trades)",
+    "turnover_ratio": 0.0,
+    "total_volume_traded": 0
+  },
+  "benchmark_comparison": {
+    "ppo_portfolio": {
+      "final_value": 100000.0,
+      "return_pct": 0.0
+    },
+    "equal_weight_buy_and_hold": {
+      "final_value": 100000.0,
+      "return_pct": 0.0
+    },
+    "dual_sma_crossover": {
+      "final_value": 100000.0,
+      "return_pct": 0.0
+    }
+  },
+  "sessions_history": [
+    {
+      "session_id": 1,
+      "trading_date": "2026-11-20",
+      "session_timestamp": "2026-11-21T15:54:00.541026",
+      "data_status": "FRESH",
+      "initial_capital": 100000.0,
+      "ledger_cash": 100000.0,
+      "reserved_cash": 33613.58,
+      "available_cash": 66386.42,
+      "holdings_value": 0.0,
+      "total_portfolio_value": 100000.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "total_pnl": 0.0,
+      "cumulative_return_pct": 0.0,
+      "daily_return_pct": 0.0,
+      "peak_portfolio_value": 100000.0,
+      "current_drawdown_pct": 0.0,
+      "executed_trades_count": 0,
+      "holdings_json": "{\"HDFCBANK\": {\"shares\": 0, \"avg_purchase_price\": 0.0, \"total_invested\": 0.0, \"current_price\": 846.0, \"current_value\": 0.0, \"unrealized_pnl\": 0.0, \"unrealized_pnl_pct\": 0.0, \"updated_at\": \"2026-11-21T15:10:17.521354\"}, \"INFY\": {\"shares\": 0, \"avg_purchase_price\": 0.0, \"total_invested\": 0.0, \"current_price\": 1098.0, \"current_value\": 0.0, \"unrealized_pnl\": 0.0, \"unrealized_pnl_pct\": 0.0, \"updated_at\": \"2026-11-21T15:10:17.521354\"}, \"ITC\": {\"shares\": 0, \"avg_purchase_price\": 0.0, \"total_invested\": 0.0, \"current_price\": 299.1, \"current_value\": 0.0, \"unrealized_pnl\": 0.0, \"unrealized_pnl_pct\": 0.0, \"updated_at\": \"2026-11-21T15:10:17.521354\"}, \"RELIANCE\": {\"shares\": 0, \"avg_purchase_price\": 0.0, \"total_invested\": 0.0, \"current_price\": 1377.5, \"current_value\": 0.0, \"unrealized_pnl\": 0.0, \"unrealized_pnl_pct\": 0.0, \"updated_at\": \"2026-11-21T15:10:17.521354\"}, \"TCS\": {\"shares\": 0, \"avg_purchase_price\": 0.0, \"total_invested\": 0.0, \"current_price\": 2376.2, \"current_value\": 0.0, \"unrealized_pnl\": 0.0, \"unrealized_pnl_pct\": 0.0, \"updated_at\": \"2026-11-21T15:10:17.521354\"}}",
+      "created_at": "2026-11-21T15:54:00.541026"
+    }
+  ],
+  "benchmark_history": [
+    {
+      "id": 1,
+      "trading_date": "2026-11-20",
+      "ppo_value": 100000.0,
+      "equal_weight_bh_value": 100000.0,
+      "reliance_bh_value": 100000.0,
+      "tcs_bh_value": 100000.0,
+      "infy_bh_value": 100000.0,
+      "hdfcbank_bh_value": 100000.0,
+      "itc_bh_value": 100000.0,
+      "sma_crossover_value": 100000.0,
+      "created_at": "2026-11-21T15:54:00.542534"
+    }
+  ]
+}

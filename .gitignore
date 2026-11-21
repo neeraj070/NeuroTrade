@@ -1,0 +1,42 @@
+# Virtual Environments
+neuro_env/
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+backend/.mpl_cache/
+
+# Production Paper Trading Private Database & Locks
+# (Preserve production orders, private transactions & live locks locally)
+data/live/paper_trading.db*
+data/live/*.db*
+data/live/*.lock
+data/live/cache/
+
+# Logs & Runtime Artifacts
+reports/logs/*.log
+*.log
+
+# Workspace & Agent Scratch Directories
+brain/
+scratch/
+
+# Environment Variables & Secrets
+.env
+*.env
+.env.local
+
+# IDE & OS Artifacts
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

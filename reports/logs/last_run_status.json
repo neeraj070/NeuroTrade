@@ -1,0 +1,15 @@
+{
+  "execution_date": "2026-11-21",
+  "timestamp": "2026-11-21T15:46:42.905481",
+  "status": "SKIPPED_WEEKEND",
+  "message": "Execution skipped",
+  "calendar": {
+    "date": "2026-11-21",
+    "weekday": "Saturday",
+    "is_trading_day": false,
+    "reason": "Weekend (Saturday)",
+    "is_weekend": true,
+    "is_holiday": false,
+    "holiday_name": null
+  }
+}

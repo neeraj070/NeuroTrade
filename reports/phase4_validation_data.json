@@ -1,0 +1,390 @@
+{
+  "timestamp": "2026-11-21T15:23:37.165478",
+  "total_tests": 46,
+  "passed_tests": 46,
+  "failed_tests": 0,
+  "results": {
+    "T1.1_data_status": {
+      "passed": true,
+      "actual": "data_status=CACHED",
+      "expected": "data_status in ['FRESH', 'CACHED']",
+      "details": "Retrieval TS: 2026-11-21T15:21:48.762270, Market TS: 2026-11-20 16:00:28"
+    },
+    "T1.2_cache_ttl": {
+      "passed": true,
+      "actual": "TTL=180s",
+      "expected": "TTL=180s",
+      "details": ""
+    },
+    "T1.3_all_stocks_present": {
+      "passed": true,
+      "actual": "Stocks with history: ['RELIANCE', 'TCS', 'INFY', 'HDFCBANK', 'ITC']",
+      "expected": "All 5 stocks present: ['RELIANCE', 'TCS', 'INFY', 'HDFCBANK', 'ITC']",
+      "details": ""
+    },
+    "T1.4_stock_quality_RELIANCE": {
+      "passed": true,
+      "actual": "127 bars, latest=2026-11-20, ltp=1377.5, valid=True",
+      "expected": ">=80 bars, chronological, no duplicates, valid OHLCV",
+      "details": ""
+    },
+    "T1.4_stock_quality_TCS": {
+      "passed": true,
+      "actual": "127 bars, latest=2026-11-20, ltp=2376.2, valid=True",
+      "expected": ">=80 bars, chronological, no duplicates, valid OHLCV",
+      "details": ""
+    },
+    "T1.4_stock_quality_INFY": {
+      "passed": true,
+      "actual": "127 bars, latest=2026-11-20, ltp=1098.0, valid=True",
+      "expected": ">=80 bars, chronological, no duplicates, valid OHLCV",
+      "details": ""
+    },
+    "T1.4_stock_quality_HDFCBANK": {
+      "passed": true,
+      "actual": "127 bars, latest=2026-11-20, ltp=846.0, valid=True",
+      "expected": ">=80 bars, chronological, no duplicates, valid OHLCV",
+      "details": ""
+    },
+    "T1.4_stock_quality_ITC": {
+      "passed": true,
+      "actual": "127 bars, latest=2026-11-20, ltp=299.1, valid=True",
+      "expected": ">=80 bars, chronological, no duplicates, valid OHLCV",
+      "details": ""
+    },
+    "T2.1_inference_RELIANCE": {
+      "passed": true,
+      "actual": "Rec=HOLD (probs: H=0.45, B=0.21, S=0.34), Critic=0.0204, EmbNorm=2.0033",
+      "expected": "Finite valid action probabilities summing to 1.0, finite critic and embedding",
+      "details": ""
+    },
+    "T2.1_inference_TCS": {
+      "passed": true,
+      "actual": "Rec=HOLD (probs: H=0.39, B=0.28, S=0.33), Critic=-0.0225, EmbNorm=2.0057",
+      "expected": "Finite valid action probabilities summing to 1.0, finite critic and embedding",
+      "details": ""
+    },
+    "T2.1_inference_INFY": {
+      "passed": true,
+      "actual": "Rec=HOLD (probs: H=0.44, B=0.24, S=0.32), Critic=-0.0563, EmbNorm=2.0066",
+      "expected": "Finite valid action probabilities summing to 1.0, finite critic and embedding",
+      "details": ""
+    },
+    "T2.1_inference_HDFCBANK": {
+      "passed": true,
+      "actual": "Rec=SELL (probs: H=0.28, B=0.32, S=0.41), Critic=-0.0352, EmbNorm=2.0007",
+      "expected": "Finite valid action probabilities summing to 1.0, finite critic and embedding",
+      "details": ""
+    },
+    "T2.1_inference_ITC": {
+      "passed": true,
+      "actual": "Rec=SELL (probs: H=0.34, B=0.26, S=0.40), Critic=0.0460, EmbNorm=2.0005",
+      "expected": "Finite valid action probabilities summing to 1.0, finite critic and embedding",
+      "details": ""
+    },
+    "T2.2_weights_immutability": {
+      "passed": true,
+      "actual": "LSTM unchanged=True, PPO unchanged=True",
+      "expected": "Model weights completely unmodified after inference",
+      "details": ""
+    },
+    "T3.1_initial_portfolio": {
+      "passed": true,
+      "actual": "cash=100000.0, reserved=0.0",
+      "expected": "cash=100000.0, reserved=0.0",
+      "details": ""
+    },
+    "T3.2_buy_pending_reservation": {
+      "passed": true,
+      "actual": "status=PENDING, reserved=13013.0",
+      "expected": "status=PENDING, reserved=13013.0",
+      "details": ""
+    },
+    "T3.3_buy_deferred_on_past_data": {
+      "passed": true,
+      "actual": "executed=0, deferred=1",
+      "expected": "executed=0, deferred=1",
+      "details": ""
+    },
+    "T3.4_buy_executed_at_next_open": {
+      "passed": true,
+      "actual": "executed=1, price=1310.0, fee=13.1",
+      "expected": "executed=1, price=1310.0, fee=13.1",
+      "details": ""
+    },
+    "T3.5_buy_portfolio_balances": {
+      "passed": true,
+      "actual": "cash=86886.9, shares=10, reserved=0.0",
+      "expected": "cash=86886.9, shares=10, reserved=0.0",
+      "details": ""
+    },
+    "T3.6_buy_insufficient_cash_rejected": {
+      "passed": true,
+      "actual": "status=REJECTED, reason=Insufficient available cash. Required: \u20b9240,240.00 (including \u20b9240.00 fee), Available: \u20b986,886.90 (Total Cash: \u20b986,886.90, Reserved in Pending: \u20b90.00)",
+      "expected": "status=REJECTED with 'Insufficient available cash'",
+      "details": ""
+    },
+    "T4.1_sell_pending_reservation": {
+      "passed": true,
+      "actual": "status=PENDING, pending_found=1",
+      "expected": "status=PENDING, 1 pending order in DB",
+      "details": ""
+    },
+    "T4.2_sell_insufficient_shares_rejected": {
+      "passed": true,
+      "actual": "status=REJECTED, reason=Insufficient shares held. Required: 5, Available: 4 (Owned: 10, Reserved in Pending: 6)",
+      "expected": "status=REJECTED with 'Insufficient shares'",
+      "details": ""
+    },
+    "T4.3_sell_executed_at_next_open": {
+      "passed": true,
+      "actual": "executed=1, price=1360.0, fee=8.16",
+      "expected": "executed=1, price=1360.0, fee=8.16",
+      "details": ""
+    },
+    "T4.4_sell_holdings_and_proceeds": {
+      "passed": true,
+      "actual": "remaining_shares=4, cash=95038.74, realized_pnl=283.98",
+      "expected": "remaining_shares=4, cash=95038.74, realized_pnl > 0.0",
+      "details": ""
+    },
+    "T5.1_invariant_available_cash": {
+      "passed": true,
+      "actual": "avail=95038.74, ledger=95038.74, reserved=0.0",
+      "expected": "available_cash == ledger_cash - reserved_cash",
+      "details": ""
+    },
+    "T5.2_invariant_available_shares": {
+      "passed": true,
+      "actual": "Shares held >= reserved shares for all stocks: True",
+      "expected": "True",
+      "details": ""
+    },
+    "T5.3_invariant_portfolio_value": {
+      "passed": true,
+      "actual": "total_val=100518.74, cash+holdings=100518.74",
+      "expected": "total_value == cash + holdings_market_value",
+      "details": ""
+    },
+    "T5.4_invariant_1to1_order_transaction": {
+      "passed": true,
+      "actual": "executed_orders=2, transactions=2",
+      "expected": "executed_orders count == transactions count and order_ids match 1:1",
+      "details": ""
+    },
+    "T5.5_invariant_non_executed_zero_transactions": {
+      "passed": true,
+      "actual": "Non-executed orders in transactions: False",
+      "expected": "Zero cancelled or rejected orders in transactions",
+      "details": ""
+    },
+    "T5.6_invariant_processing_idempotency": {
+      "passed": true,
+      "actual": "executed_count=0, transactions=2",
+      "expected": "executed_count=0, transaction count unchanged",
+      "details": ""
+    },
+    "T6.1_api_health": {
+      "passed": true,
+      "actual": "status=online, code=200",
+      "expected": "status=online, code=200",
+      "details": ""
+    },
+    "T6.2_api_portfolio": {
+      "passed": true,
+      "actual": "code=200, keys=['initial_capital', 'cash', 'ledger_cash', 'reserved_cash', 'available_cash']",
+      "expected": "code=200, valid portfolio JSON",
+      "details": ""
+    },
+    "T6.3_api_orders": {
+      "passed": true,
+      "actual": "code=200, orders_count=4",
+      "expected": "code=200, list of orders",
+      "details": ""
+    },
+    "T6.4_api_history": {
+      "passed": true,
+      "actual": "code=200, tx_count=2",
+      "expected": "code=200, list of transactions",
+      "details": ""
+    },
+    "T6.5_api_order_reject_empty_body": {
+      "passed": true,
+      "actual": "HTTP 400 returned=True",
+      "expected": "HTTP 400",
+      "details": ""
+    },
+    "T6.6_api_order_reject_invalid_symbol": {
+      "passed": true,
+      "actual": "HTTP 400 returned=True",
+      "expected": "HTTP 400",
+      "details": ""
+    },
+    "T6.7_api_order_reject_negative_quantity": {
+      "passed": true,
+      "actual": "HTTP 400 returned=True",
+      "expected": "HTTP 400",
+      "details": ""
+    },
+    "T6.8_api_cancel_order": {
+      "passed": true,
+      "actual": "code=200, success=True",
+      "expected": "code=200, success=True",
+      "details": ""
+    },
+    "T6.9_api_process_pending": {
+      "passed": true,
+      "actual": "code=200, success=True",
+      "expected": "code=200, success=True",
+      "details": ""
+    },
+    "PROD_1_orders_27_and_28_intact": {
+      "passed": true,
+      "actual": "Order 27: (27, 'INFY', 'BUY', 10, 'PENDING', '2026-11-17', '2026-11-20T16:39:24.001904'), Order 28: (28, 'INFY', 'BUY', 10, 'PENDING', '2026-11-17', '2026-11-20T16:40:14.165768')",
+      "expected": "Both orders present and PENDING",
+      "details": ""
+    },
+    "PROD_2_zero_test_orders_in_prod": {
+      "passed": true,
+      "actual": "Production order IDs: [27, 28, 29]",
+      "expected": "Only authentic production orders present (no test orders)",
+      "details": ""
+    },
+    "PROD_3_zero_production_transactions": {
+      "passed": true,
+      "actual": "Total transactions: 0",
+      "expected": "0 transactions",
+      "details": ""
+    },
+    "PROD_4_portfolio_cash_intact": {
+      "passed": true,
+      "actual": "Cash: 100000.0",
+      "expected": "Cash: 100000.0",
+      "details": ""
+    },
+    "PROD_5_hash_lstm_checkpoint": {
+      "passed": true,
+      "actual": "8bab84a4ee5448e0...",
+      "expected": "8bab84a4ee5448e0...",
+      "details": ""
+    },
+    "PROD_5_hash_ppo_checkpoint": {
+      "passed": true,
+      "actual": "11b09d4855dfacc7...",
+      "expected": "11b09d4855dfacc7...",
+      "details": ""
+    },
+    "PROD_5_hash_feature_scaler": {
+      "passed": true,
+      "actual": "406f22d109ddac82...",
+      "expected": "406f22d109ddac82...",
+      "details": ""
+    }
+  },
+  "tables": {
+    "test1_stock_summary": {
+      "RELIANCE": {
+        "bars_count": 127,
+        "latest_candle": "2026-11-20",
+        "ltp": 1377.5,
+        "chronological": true,
+        "no_duplicates": true,
+        "valid_values": true
+      },
+      "TCS": {
+        "bars_count": 127,
+        "latest_candle": "2026-11-20",
+        "ltp": 2376.2,
+        "chronological": true,
+        "no_duplicates": true,
+        "valid_values": true
+      },
+      "INFY": {
+        "bars_count": 127,
+        "latest_candle": "2026-11-20",
+        "ltp": 1098.0,
+        "chronological": true,
+        "no_duplicates": true,
+        "valid_values": true
+      },
+      "HDFCBANK": {
+        "bars_count": 127,
+        "latest_candle": "2026-11-20",
+        "ltp": 846.0,
+        "chronological": true,
+        "no_duplicates": true,
+        "valid_values": true
+      },
+      "ITC": {
+        "bars_count": 127,
+        "latest_candle": "2026-11-20",
+        "ltp": 299.1,
+        "chronological": true,
+        "no_duplicates": true,
+        "valid_values": true
+      }
+    },
+    "test2_inference": {
+      "RELIANCE": {
+        "LTP": 1377.5,
+        "LatestBar": "2026-11-20",
+        "Recommendation": "HOLD",
+        "HOLD_prob": 0.453,
+        "BUY_prob": 0.2058,
+        "SELL_prob": 0.3412,
+        "CriticValue": 0.0204,
+        "LSTM_Return": -0.061,
+        "EmbeddingNorm": 2.0033
+      },
+      "TCS": {
+        "LTP": 2376.2,
+        "LatestBar": "2026-11-20",
+        "Recommendation": "HOLD",
+        "HOLD_prob": 0.3902,
+        "BUY_prob": 0.2791,
+        "SELL_prob": 0.3307,
+        "CriticValue": -0.0225,
+        "LSTM_Return": -0.06,
+        "EmbeddingNorm": 2.0057
+      },
+      "INFY": {
+        "LTP": 1098.0,
+        "LatestBar": "2026-11-20",
+        "Recommendation": "HOLD",
+        "HOLD_prob": 0.4386,
+        "BUY_prob": 0.2408,
+        "SELL_prob": 0.3206,
+        "CriticValue": -0.0563,
+        "LSTM_Return": -0.049,
+        "EmbeddingNorm": 2.0066
+      },
+      "HDFCBANK": {
+        "LTP": 846.0,
+        "LatestBar": "2026-11-20",
+        "Recommendation": "SELL",
+        "HOLD_prob": 0.275,
+        "BUY_prob": 0.318,
+        "SELL_prob": 0.407,
+        "CriticValue": -0.0352,
+        "LSTM_Return": -0.086,
+        "EmbeddingNorm": 2.0007
+      },
+      "ITC": {
+        "LTP": 299.1,
+        "LatestBar": "2026-11-20",
+        "Recommendation": "SELL",
+        "HOLD_prob": 0.3383,
+        "BUY_prob": 0.259,
+        "SELL_prob": 0.4028,
+        "CriticValue": 0.046,
+        "LSTM_Return": -0.085,
+        "EmbeddingNorm": 2.0005
+      }
+    },
+    "artifact_hashes": {
+      "LSTM Checkpoint": "8bab84a4ee5448e01f0422262e4e0abe78c1957f80481d1dd12a9b8e03286c52",
+      "PPO Checkpoint": "11b09d4855dfacc78d69fef2ecee760c4e72d817598ffd20fc2eb578fe39a22e",
+      "Feature Scaler": "406f22d109ddac82489162906b2308d4c24269c4f352ec70a508c188b50ce8be"
+    }
+  }
+}
