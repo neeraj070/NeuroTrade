@@ -1,8 +1,5 @@
 # NeuroTrader: Reinforcement Learning with RNN-Based Market State Representation for Algorithmic Trading
 
-**B.Tech Final-Year Capstone Project in Computer Science & Engineering**  
-**Evaluation Window:** 2015-02 to 2026-11 (5 High-Cap National Stock Exchange of India Equities)  
-**Status:** Completed, Verified, and 100% Bitwise Reproducible  
 **Target Equities:** `RELIANCE.NS`, `TCS.NS`, `INFY.NS`, `HDFCBANK.NS`, `ITC.NS`  
 
 > [!IMPORTANT]
